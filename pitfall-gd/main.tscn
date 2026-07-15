@@ -7,3 +7,5 @@
 [node name="Harry" type="CharacterBody2D" parent="Player" unique_id=1191513617]
 
 [node name="HarryCollisionShape" type="CollisionShape2D" parent="Player/Harry" unique_id=498012992]
+
+[node name="HarrySprite" type="AnimatedSprite2D" parent="Player/Harry" unique_id=994070012]
