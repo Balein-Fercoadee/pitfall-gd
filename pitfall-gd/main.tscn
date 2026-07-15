@@ -15,12 +15,15 @@ animations = [{
 
 [node name="Main" type="Node" unique_id=554018580]
 
-[node name="Player" type="Node" parent="." unique_id=857435135]
+[node name="GameObjects" type="Node" parent="." unique_id=857435135]
 
-[node name="Harry" type="CharacterBody2D" parent="Player" unique_id=1191513617]
+[node name="Harry" type="CharacterBody2D" parent="GameObjects" unique_id=1191513617]
+position = Vector2(339, 183)
 
-[node name="HarryCollisionShape" type="CollisionShape2D" parent="Player/Harry" unique_id=498012992]
+[node name="HarryCollisionShape" type="CollisionShape2D" parent="GameObjects/Harry" unique_id=498012992]
 
-[node name="HarrySprite" type="AnimatedSprite2D" parent="Player/Harry" unique_id=994070012]
+[node name="HarrySprite" type="AnimatedSprite2D" parent="GameObjects/Harry" unique_id=994070012]
 sprite_frames = SubResource("SpriteFrames_0xm2m")
 animation = &"standing"
+
+[node name="RollingLog" type="AnimatableBody2D" parent="GameObjects" unique_id=1280129297]
