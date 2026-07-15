@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://qswl40ofx62q"]
+
+[node name="Main" type="Node" unique_id=554018580]
+
+[node name="Player" type="Node" parent="." unique_id=857435135]
+
+[node name="Harry" type="CharacterBody2D" parent="Player" unique_id=1191513617]
+
+[node name="HarryCollisionShape" type="CollisionShape2D" parent="Player/Harry" unique_id=498012992]
