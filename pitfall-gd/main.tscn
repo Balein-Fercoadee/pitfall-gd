@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://qswl40ofx62q"]
 
+[ext_resource type="Script" uid="uid://bagg88g1vavhf" path="res://harry/Harry.cs" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://dp77est37bxnr" path="res://harry/harry_standing.png" id="1_ig7tw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y4vk1"]
+size = Vector2(18, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0xm2m"]
 animations = [{
@@ -8,7 +12,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("1_ig7tw")
 }],
-"loop": true,
+"loop": 1,
 "name": &"standing",
 "speed": 5.0
 }]
@@ -19,10 +23,12 @@ animations = [{
 
 [node name="Harry" type="CharacterBody2D" parent="GameObjects" unique_id=1191513617]
 position = Vector2(339, 183)
+script = ExtResource("1_0xm2m")
 
 [node name="HarryCollisionShape" type="CollisionShape2D" parent="GameObjects/Harry" unique_id=498012992]
+shape = SubResource("RectangleShape2D_y4vk1")
 
-[node name="HarrySprite" type="AnimatedSprite2D" parent="GameObjects/Harry" unique_id=994070012]
+[node name="HarrySprite" type="AnimatedSprite2D" parent="GameObjects/Harry/HarryCollisionShape" unique_id=994070012]
 sprite_frames = SubResource("SpriteFrames_0xm2m")
 animation = &"standing"
 
